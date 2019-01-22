@@ -1,0 +1,31 @@
+{
+  "name": "prodjectwarrom",
+  "description": "war",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "author": "Matthew Mastell.",
+  "engines": {
+    "node": ">=8"
+  },
+  "repository": "https://github.com/GoogleCloudPlatform/projectwarroomnode",
+  "main": "warnoode.js",
+  "private": true,
+  "cloud-repo-tools": {
+    "requiresKeyFile": true,
+    "requiresProjectId": true,
+  },
+  "scripts": {
+    "start": "node warnoode.js",
+    "e2e": "repo-tools test deploy",
+    "test": "repo-tools test app",
+    "cover": "nyc --cache npm test; nyc report --reporter=html"
+  },
+  "dependencies": {
+    "express": "4.16.4"
+  },
+  "devDependencies": {
+    "@google-cloud/nodejs-repo-tools": "^3.0.0",
+    "ava": "0.25.0",
+    "supertest": "^3.3.0"
+  }
+}
